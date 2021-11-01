@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <h1>{{ object.business_name }}</h1>
+    <p>{{ object.address }}</p>
+    <h3>Services:</h3>
+    <ol>
+        {% for service in services %}
+            <li><a href="#">{{ service }}</a> - {{ service.rating }}</li><!-- to replace ratings with starts later -->
+        {% endfor %}
+    </ol>
+{% endblock %}
